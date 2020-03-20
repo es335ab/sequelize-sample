@@ -64,9 +64,13 @@ $ yarn sequelize-cli seed:generate --name test-users
 $ yarn sequelize-cli db:seed:all
 ```
 
+## アプリからDBにつなぐサンプル
 
+```
+$ NODE_ENV="development" node sample.js
+```
 
+## sequelizeのModelを使ってみる
 
-
-
+WIP
 
