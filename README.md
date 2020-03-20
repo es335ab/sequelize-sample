@@ -87,3 +87,9 @@ $ NODE_ENV="development" node sample.js
 ```
 $ node app.js
 ```
+
+## サンプルリクエストを送る
+
+```
+$ curl http://localhost:3333
+```
