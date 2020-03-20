@@ -24,6 +24,12 @@ $ cp config/config.json.sample config/config.json
 $ vi config/config.json
 ```
 
+## .envを作成
+
+```
+$ cp .env.sample .env
+```
+
 ## テーブルをつくる
 
 例えば、usersという名前のテーブルをDBにつくる
@@ -76,3 +82,8 @@ $ NODE_ENV="development" node sample.js
 $ NODE_ENV="development" node sample.js
 ```
 
+## expressサーバーを立ち上げる
+
+```
+$ node app.js
+```
