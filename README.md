@@ -1,3 +1,7 @@
+# 公式ドキュメント
+
+- https://sequelize.org/master/manual
+
 # 依存
 
 ```
