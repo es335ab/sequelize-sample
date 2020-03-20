@@ -72,5 +72,7 @@ $ NODE_ENV="development" node sample.js
 
 ## sequelizeのModelを使ってみる
 
-WIP
+```
+$ NODE_ENV="development" node sample.js
+```
 

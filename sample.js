@@ -7,14 +7,17 @@ const sequelize = new Sequelize(
   config[process.env.NODE_ENV].username,
   config[process.env.NODE_ENV].password,
   config[process.env.NODE_ENV].options
-)
+);
 
-// sequelize.query('select * from users').then(function(users) {
-//   console.log(JSON.stringify(users))
-// })
+(async () => {
+  const usersByQuery = await sequelize.query('select * from users').catch(error => {
+    console.error(error)
+  })
 
-console.log(models.user)
+  const usersByModel = await models.user.findAll().catch(error => {
+    console.error(error)
+  })
 
-models.user.findAll().then(users=>{
-  console.log(JSON.stringify(users))
-})
+  console.info(`usersByQuery: ${JSON.stringify(usersByQuery)}`)
+  console.info(`usersByModel: ${JSON.stringify(usersByModel)}`)
+})()
