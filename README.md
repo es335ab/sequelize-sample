@@ -30,8 +30,13 @@ $ vi config/config.json
 $ cp .env.sample .env
 ```
 
-## テーブルをつくる
+## データベースを作る
 
+```
+$ yarn sequelize-cli db:create
+```
+
+## テーブルをつくる
 例えば、usersという名前のテーブルをDBにつくる
 
 ```
@@ -49,8 +54,6 @@ $ vi migrations/*-users.js
 スキーマの作り方はリポジトリにあるサンプルコード`migrations/20200320063514-users.js` を参考にしてください。
 
 ## マイグレーション実行
-
-（、、の前に、手動で任意のデータベースをcreateしてください）
 
 ```
 $ yarn sequelize-cli db:migrate
@@ -94,6 +97,12 @@ $ NODE_ENV="development" yarn nodemon app.js
 
 ```
 $ curl http://localhost:3333/api/v1/users
+```
+
+- 詳細取得
+
+```
+$ curl http://localhost:3333/api/v1/users/1
 ```
 
 - 新規保存

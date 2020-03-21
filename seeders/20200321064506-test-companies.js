@@ -1,23 +1,21 @@
-'use strict'
+'use strict';
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     const now = new Date()
-    return queryInterface.bulkInsert('users', [{
-      name: 'A',
-      companyId: 1,
+    return queryInterface.bulkInsert('companies', [{
+      name: '会社1',
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
-      name: 'B',
-      companyId: 1,
+      name: '会社2',
       createdAt: new Date(),
       updatedAt: new Date()
     }], {})
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('users', null, {})
+    return queryInterface.bulkDelete('companies', null, {})
   }
-}
+};
