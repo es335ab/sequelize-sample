@@ -85,7 +85,7 @@ $ NODE_ENV="development" node sample.js
 ## expressサーバーを立ち上げる
 
 ```
-$ node app.js
+$ NODE_ENV="development" yarn nodemon app.js
 ```
 
 ## サンプルリクエストを送る
