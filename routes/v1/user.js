@@ -30,7 +30,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   // host登録時はbulkCreate で複数レコード一気に登録すると良さそう
   const user = await models.user.create({
-    name: req.body.name
+    name: req.body.name,
+    companyId: req.body.companyId
   }).catch(error => {
     console.error(error)
     res.json({

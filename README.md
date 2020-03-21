@@ -111,6 +111,6 @@ $ curl http://localhost:3333/api/v1/users/1
 $ curl --location --request POST 'http://localhost:3333/api/v1/users' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "aaa"
+  "name": "aaa", "companyId": 1
 }'
 ```
