@@ -90,6 +90,18 @@ $ node app.js
 
 ## サンプルリクエストを送る
 
+- 一覧取得
+
 ```
-$ curl http://localhost:3333
+$ curl http://localhost:3333/api/v1/users
+```
+
+- 新規保存
+
+```
+$ curl --location --request POST 'http://localhost:3333/api/v1/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "aaa"
+}'
 ```
